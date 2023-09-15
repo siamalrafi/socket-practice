@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>CHAT</title>
+   </head>
+   <body>
+      hello world
+
+      <input type="name" id="name" />
+      <input type="phone" id="phone" />
+      <button onclick="handleSend()">Button</button>
+      <script src="/socket.io/socket.io.js"></script>
+
+      <script>
+         const socket = io("/wordCup");
+
+         socket.on("wordCupEvent", (data) => {});
+
+         // socket.on("backend", (data) => {
+         //    console.log(data);
+         // });
+
+         // socket.emit("fifa", "khahalla");
+         // // const handleSend = () => {
+         // //    const name = document.getElementById("name").value;
+         // //    const phone = document.getElementById("phone").value;
+
+         // //    socket.emit("textEvent", { name, phone });
+         // // };
+      </script>
+   </body>
+</html>

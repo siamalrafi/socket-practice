@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Check</title>
+   </head>
+   <body>
+      <h1>Hello check</h1>
+      <script src="/socket.io/socket.io.js"></script>
+      <script>
+         const socket = io();
+         socket.on("connect", () => {
+            console.log("Connected to the server");
+
+            // You can send data to the server
+            socket.emit("chatMessage", "Hello, server!");
+         });
+
+         // Handle incoming data from the server
+         socket.on("serverMessage", (data) => {
+            console.log("Received from server:", data);
+         });
+      </script>
+   </body>
+</html>
